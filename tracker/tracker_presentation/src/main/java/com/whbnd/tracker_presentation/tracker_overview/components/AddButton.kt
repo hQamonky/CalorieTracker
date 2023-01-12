@@ -28,7 +28,7 @@ fun AddButton(
 ) {
     val spacing = LocalSpacing.current
     Row(
-        modifier = Modifier
+        modifier = modifier
             .clip(RoundedCornerShape(100f))
             .clickable { onClick() }
             .border(
@@ -53,5 +53,4 @@ fun AddButton(
         )
 
     }
-
 }

@@ -10,11 +10,13 @@ import com.whbnd.core.util.UiEvent
 import com.whbnd.core.util.UiText
 import com.whbnd.tracker_domain.use_case.TrackerUseCases
 import com.whbnd.tracker_presentation.R
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@HiltViewModel
 class SearchViewModel @Inject constructor(
     private val trackedUseCases: TrackerUseCases,
     private val filterOutDigits: FilterOutDigits
