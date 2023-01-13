@@ -91,6 +91,7 @@ class DefaultPreferences(private val sharedPref: SharedPreferences): Preferences
     override fun saveShouldShowOnboarding(shouldShow: Boolean) {
         sharedPref.edit()
             .putBoolean(Preferences.KEY_SHOULD_SHOW_ONBOARDING, shouldShow)
+            .apply()
     }
 
     override fun loadShouldShowOnboarding(): Boolean {

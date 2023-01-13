@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.whbnd.core.domain.preferences.Preferences
 import com.whbnd.core.domain.use_case.FilterOutDigits
-import com.whbnd.core.navigation.Route
 import com.whbnd.core.util.UiEvent
 import com.whbnd.core.util.UiText
 import com.whbnd.core.R
@@ -46,7 +45,7 @@ class AgeViewModel @Inject constructor(
                 return@launch
             }
             preferences.saveAge(ageNumber)
-            _uiEvent.send(UiEvent.Navigate(Route.HEIGHT))
+            _uiEvent.send(UiEvent.Success)
         }
     }
 }
